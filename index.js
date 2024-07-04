@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactNative from 'react-native'
 import PropTypes from 'prop-types';
+import SpinKitNativeComponent from './src/SpinKitNativeComponents'
 
 var {
 	NativeModules,
 	processColor,
 	requireNativeComponent,
-	View
+	View,
+	Platform
 } = ReactNative;
 
 var RNSpinkit = null;
@@ -43,24 +45,36 @@ class Spinkit extends React.Component {
 	};
 
 	render() {
-		if (!this.props.isVisible) return <View/>;
+		if (!this.props.isVisible) return <View />;
+		if (Platform.OS === 'harmony') {
+			return (
+				<View style={{ width: this.props.size, height: this.props.size, ...this.props.style }}>
+					<SpinKitNativeComponent
+						size={parseInt(this.props.size)}
+						color={this.props.color}
+						type={this.props.type}
+					/>
+				</View >
+			)
+		} else {
 
-		var size = {height: this.props.size, width: this.props.size};
+			var size = { height: this.props.size, width: this.props.size };
 
-		// In order to handle all the color specifications allowed in React Native
-		// as a whole, we need to call processColor here, and can pass in the
-		// resulting number directly. RCTConvert will be called on iOS to parse
-		// into #AARRGGBB form; on Android, this int can be used directly for
-		// setting the color.
-		var colorNumber = processColor(this.props.color);
+			// In order to handle all the color specifications allowed in React Native
+			// as a whole, we need to call processColor here, and can pass in the
+			// resulting number directly. RCTConvert will be called on iOS to parse
+			// into #AARRGGBB form; on Android, this int can be used directly for
+			// setting the color.
+			var colorNumber = processColor(this.props.color);
 
-		return (
-			<RNSpinkit
-				type={String(this.props.type)}
-				size={parseInt(this.props.size)}
-				color={colorNumber}
-				style={[size, this.props.style]}/>
-		);
+			return (
+				<RNSpinkit
+					type={String(this.props.type)}
+					size={parseInt(this.props.size)}
+					color={colorNumber}
+					style={[size, this.props.style]} />
+			);
+		}
 	}
 
 }
@@ -73,11 +87,11 @@ NativeModules.RNSpinkit;
 RNSpinkit = requireNativeComponent(
 	'RNSpinkit',
 	Spinkit,
-    {
-        nativeOnly: {
-            'nativeID': true
-        }
-    }
+	{
+		nativeOnly: {
+			'nativeID': true
+		}
+	}
 );
 
 

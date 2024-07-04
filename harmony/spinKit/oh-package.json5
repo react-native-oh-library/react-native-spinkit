@@ -1,0 +1,14 @@
+{
+  "name": "@react-native-oh-tpl/react-native-spinkit",
+  "version": "1.5.1-0.0.1",
+  "description": "A collection of animated loading indicators for React Native",
+  "main": "Index.ets",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "file:../react_native_openharmony",
+    "@pura/spinkit": "^1.0.0"
+  },
+  "devDependencies": {},
+  "dynamicDependencies": {}
+}

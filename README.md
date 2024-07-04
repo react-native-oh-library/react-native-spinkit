@@ -6,9 +6,9 @@
 A collection of animated loading indicators   
 React native port of [SpinKit](http://tobiasahlin.com/spinkit/).
 
-## Use your beautiful spinner to sell in-app purchases 👇
-<a href="https://bit.ly/react-native-iaphub" title="IAPHUB">
-	<img width=882px src="https://www.iaphub.com/img/github/github-rn-ad.png" alt="IAPHUB">
+## 👇 Give it a try or just some love ⭐
+<a href="https://bit.ly/react-native-iaphub" title="IAPHUB link">
+	<img width=882px src="https://www.iaphub.com/github-rn-ad.png" alt="IAPHUB logo">
 </a>
 <br/>
 
@@ -68,4 +68,4 @@ Android  library: [Android-SpinKit](https://github.com/ybq/Android-SpinKit)
 
 ## License
 
-(c) 2016 Max, [MIT license](/LICENSE).
+(c) 2016 Maxime Mezrahi, [MIT license](/LICENSE).

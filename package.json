@@ -1,6 +1,6 @@
 {
-  "name": "react-native-spinkit",
-  "version": "1.5.1",
+  "name": "@react-native-oh-tpl/react-native-spinkit",
+  "version": "1.5.1-0.0.1",
   "description": "A collection of animated loading indicators for React Native",
   "main": "index.js",
   "keywords": [
@@ -18,10 +18,19 @@
     "url": "git://github.com/maxs15/react-native-spinkit.git"
   },
   "author": {
-    "name": "Max",
+    "name": "Maxime Mezrahi",
+    "email": "maxime.mezrahi@gmail.com",
     "url": "https://github.com/maxs15"
   },
   "dependencies": {
     "prop-types": "^15.5.8"
+  },
+  "harmony": {
+    "alias": "react-native-spinkit",
+    "codegenConfig": {
+      "specPaths": [
+        "./src"
+      ]
+    }
   }
 }
