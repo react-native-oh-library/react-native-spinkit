@@ -1,6 +1,6 @@
 {
   "name": "@react-native-ohos/react-native-spinkit",
-  "version": "1.5.2-rc.0",
+  "version": "1.5.2-rc.1",
   "description": "A collection of animated loading indicators for React Native",
   "main": "Index.ets",
   "author": "",
