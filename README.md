@@ -1,7 +1,7 @@
 
-# @react-native-oh-tpl/react-native-spinkit
+# @react-native-ohos/react-native-spinkit
 
-本项目基于 [react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
+本项目基于 [react-native-spinkit@1.5.1](https://github.com/maxs15/react-native-spinkit/tree/v1.5.1)
 
 ## 文档地址 / Documentation URL 
 
