@@ -23,7 +23,7 @@
  */
 
 import { RNComponentContext, RNViewBase } from '@rnoh/react-native-openharmony';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from "./generated"
 import { SpinKit, SpinType } from '@pura/spinkit/Index';
 import { CircleFlip } from './CircleFlip';
 import { WordPress } from './WordPress';

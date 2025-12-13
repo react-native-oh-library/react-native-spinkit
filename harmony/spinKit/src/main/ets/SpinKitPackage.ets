@@ -22,7 +22,24 @@
  * SOFTWARE.
  */
 
-import {RNSpinKitPackage as SpinKitPackage } from "./src/main/ets/SpinKitPackage";
-export * from "./src/main/ets/SpinKitView"
-export * from './ts';
-export default SpinKitPackage
+import {
+  RNOHPackage,
+  DescriptorWrapperFactoryByDescriptorType,
+  DescriptorWrapperFactoryByDescriptorTypeCtx,
+  ComponentBuilderContext
+} from '@rnoh/react-native-openharmony';
+import { RNC } from "./generated/ts"
+import {SpinKitView} from "./SpinKitView"
+@Builder
+function builderSpinKitView(ctx:ComponentBuilderContext){
+   SpinKitView({ctx:ctx.rnComponentContext,tag:ctx.tag})
+}
+export class RNSpinKitPackage extends RNOHPackage {
+
+  createDescriptorWrapperFactoryByDescriptorType(ctx: DescriptorWrapperFactoryByDescriptorTypeCtx): DescriptorWrapperFactoryByDescriptorType {
+    return { 'SpinKitView': (ctx2) => new RNC.SpinKitView.DescriptorWrapper(ctx2.descriptor) }
+  }
+  createWrappedCustomRNComponentBuilderByComponentNameMap(): Map<string, WrappedBuilder<[ComponentBuilderContext]>> {
+    return new Map().set(SpinKitView.NAME,wrapBuilder(builderSpinKitView))
+  }
+}
