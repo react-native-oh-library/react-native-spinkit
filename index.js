@@ -52,7 +52,7 @@ class Spinkit extends React.Component {
 					<SpinKitNativeComponent
 						size={parseInt(this.props.size)}
 						color={this.props.color}
-						type={this.props.type}
+						type={this.props.type=='9CubeGrid'?'CubeGrid':this.props.type}
 					/>
 				</View >
 			)

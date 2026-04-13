@@ -1,4 +1,4 @@
-/*
+/**
  * MIT License
  *
  * Copyright (C) 2024 Huawei Device Co., Ltd.
@@ -21,17 +21,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+#ifndef SPINKITPACKAGE_H
+#define SPINKITPACKAGE_H
 
-import {
-  RNPackage,
-  DescriptorWrapperFactoryByDescriptorType,
-  DescriptorWrapperFactoryByDescriptorTypeCtx
-} from '@rnoh/react-native-openharmony/ts';
-import { RNC } from "@rnoh/react-native-openharmony/generated/ts"
+#include "generated/RNOH/generated/BaseReactNativeSpinkitPackage.h"
+#pragma once
 
-export class RNSpinKitPackage extends RNPackage {
-
-  createDescriptorWrapperFactoryByDescriptorType(ctx: DescriptorWrapperFactoryByDescriptorTypeCtx): DescriptorWrapperFactoryByDescriptorType {
-    return { 'SpinKitView': (ctx2) => new RNC.SpinKitView.DescriptorWrapper(ctx2.descriptor) }
-  }
-}
+namespace rnoh {
+class SpinKitPackage : public BaseReactNativeSpinkitPackage {
+    using Super = BaseReactNativeSpinkitPackage;
+    using Super::Super;
+};
+} // namespace rnoh
+#endif // SPINKITPACKAGE_H
