@@ -3,6 +3,9 @@
   "version": "1.6.0",
   "description": "A collection of animated loading indicators for React Native",
   "main": "index.js",
+  "scripts": {
+    "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name react-native-spinkit --cpp-output-path ./harmony/spinKit/src/main/cpp/generated --ets-output-path ./harmony/spinKit/src/main/ets/generated --turbo-modules-spec-paths ./src/SpinKitNativeComponents.ts  --arkts-components-spec-paths ./src"
+  },
   "keywords": [
     "react-component",
     "react-native",
@@ -15,22 +18,33 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/maxs15/react-native-spinkit.git"
+    "url": "https://github.com/react-native-oh-library/react-native-spinkit.git"
+  },
+  "publishConfig": {
+   "registry": "https://registry.npmjs.org/",
+   "access": "public"
   },
   "author": {
     "name": "Maxime Mezrahi",
     "email": "maxime.mezrahi@gmail.com",
     "url": "https://github.com/maxs15"
   },
+  "devDependencies": {
+    "metro": "0.82.5",
+    "memfs": "4.17.2",
+    "@react-native-community/cli": "11.4.1",
+    "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.27"
+  },
   "dependencies": {
     "prop-types": "^15.5.8"
   },
   "harmony": {
     "alias": "react-native-spinkit",
-    "codegenConfig": {
-      "specPaths": [
-        "./src"
-      ]
+    "autolinking": {
+     "etsPackageClassName":"SpinKitPackage",
+     "cppPackageClassName":"SpinKitPackage",
+     "cmakeLibraryTargetName": "rnoh_spinkit", 
+     "ohPackageName": "@react-native-ohos/react-native-spinkit"
     }
   }
 }

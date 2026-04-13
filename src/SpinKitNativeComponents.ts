@@ -15,7 +15,7 @@ export interface SpinnerProps extends ViewProps {
     | 'ChasingDots'
     | 'ThreeBounce'
     | 'Circle'
-    | '9CubeGrid'
+    | 'CubeGrid'
     | 'WordPress'
     | 'FadingCircle'
     | 'FadingCircleAlt'

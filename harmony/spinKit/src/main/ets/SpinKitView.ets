@@ -23,7 +23,7 @@
  */
 
 import { RNComponentContext, RNViewBase } from '@rnoh/react-native-openharmony';
-import { RNC } from "@rnoh/react-native-openharmony/generated"
+import { RNC } from "./generated"
 import { SpinKit, SpinType } from '@pura/spinkit/Index';
 import { CircleFlip } from './CircleFlip';
 import { WordPress } from './WordPress';
@@ -115,7 +115,7 @@ export struct SpinKitView {
             spinSize: this.descriptorWrapper.props.size,
             spinColor: this.descriptorWrapper.props.color
           })
-        } else if (this.descriptorWrapper.props.type === '9CubeGrid') {
+        } else if (this.descriptorWrapper.props.type === 'CubeGrid') {
           NineCubeGrid({
             spinSize: this.descriptorWrapper.props.size,
             spinColor: this.descriptorWrapper.props.color
