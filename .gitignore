@@ -1,0 +1,5 @@
+harmony/spinKit/build/
+harmony/spinKit/oh_modules/
+*.tgz
+harmony/spinKit/oh-package-lock.json5
+harmony/spinKit/BuildProfile.ets
